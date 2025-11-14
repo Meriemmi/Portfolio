@@ -20,6 +20,8 @@
       <nav class="nav-links">
         <a href="#home">Accueil</a>
         <a href="#projects">Projets</a>
+        <a href="#renders">Renders</a>
+        <a href="#report">Rapport</a>
       </nav>
     </div>
   </header>
@@ -27,237 +29,189 @@
   <!-- ====== SECTION PRINCIPALE ====== -->
   <main id="home">
     <section class="hero">
-      <h1>Mes Projets & Travaux Pratiques</h1>
-      <p class="subtitle">Découvrez mes créations en 3D et mes projets réalisés avec Blender et d'autres outils.</p>
-    </section>
-     
-    <!-- ====== SECTION PROJETS ====== -->
-    <section class="projects-section" id="projects">
-      <h2 class="blender-title">
-        Projets Blender
-        <img src="images/blender_logo.png" alt="Logo Blender" class="blender-title-logo">
-      </h2>
-
-      <!-- ✅ TOUS LES PROJETS DANS LA GRILLE -->
-      <div class="projects-grid">
-              
-
-
-        
-        <!-- Projet 1 -->
-        <div class="project-card">
-          <h3>TP - Création d’un Objet 3D</h3>
-          <div class="viewer-wrapper">
-            <div class="viewer-header">
-              <span class="viewer-title">🧱 Aperçu 3D de l’Objet</span>
-            </div>
-            <model-viewer id="objet3D" src="tp/5.glb" camera-controls></model-viewer>
-            <script type="module">
-              const viewer = document.querySelector('#objet3D');
-              viewer.addEventListener('load', () => {
-                const material = viewer.model.materials[0];
-                material.pbrMetallicRoughness.setBaseColorFactor([0.6, 0.45, 0.85, 1.0]);
-              });
-            </script>
-            <div class="viewer-footer">
-              <span>💡 Faites pivoter et zoomez pour examiner l’objet 🔍</span>
-            </div>
-          </div>
-          <div class="btn-group">
-            <a href="tp/3-2.blend" download class="btn">📥 Télécharger l’objet</a>
-          </div>
-        </div>
-
-        <!-- Projet 2 -->
-        <div class="project-card">
-          <h3>TP - Création d’une Chaise 3D</h3>
-          <div class="viewer-wrapper">
-            <div class="viewer-header">
-              <span class="viewer-title">🪑 Aperçu 3D de la Chaise</span>
-            </div>
-            <model-viewer id="chaise3D" src="tp/chaise.glb" camera-controls></model-viewer>
-            <script type="module">
-              const viewer2 = document.querySelector('#chaise3D');
-              viewer2.addEventListener('load', () => {
-                const material = viewer2.model.materials[0];
-                material.pbrMetallicRoughness.setBaseColorFactor([1.0, 0.45, 0.1]);
-              });
-            </script>
-            <div class="viewer-footer">
-              <span>💡 Utilisez la souris pour faire pivoter la chaise 🔄</span>
-            </div>
-          </div>
-          <div class="btn-group">
-            <a href="tp/chaise.blend" download class="btn">📥 Télécharger la Chaise</a>
-          </div>
-        </div>
-
-        <!-- Projet 3 -->
-        <div class="project-card">
-          <h3>TP - Création d’une Table 3D</h3>
-          <div class="viewer-wrapper">
-            <div class="viewer-header">
-              <span class="viewer-title">🪵 Aperçu 3D de la Table</span>
-            </div>
-            <model-viewer id="table3D" src="tp/Table.glb" camera-controls></model-viewer>
-            <script type="module">
-              const viewer3 = document.querySelector('#table3D');
-              viewer3.addEventListener('load', () => {
-                const material = viewer3.model.materials[0];
-                material.pbrMetallicRoughness.setBaseColorFactor([1.0, 0.45, 0.1]);
-              });
-            </script>
-            <div class="viewer-footer">
-              <span>💡 Faites pivoter et zoomez pour examiner la table 🔍</span>
-            </div>
-          </div>
-          <div class="btn-group">
-            <a href="tp/Table.blend" download class="btn">📥 Télécharger la Table</a>
-          </div>
-        </div>
-
-        <!-- Projet 4 -->
-        <div class="project-card">
-          <h3>TP – Animation 3D d’un Cube Lumineux</h3>
-          <p>Ce TP explore les animations 3D dans Blender.</p>
-          <div class="viewer-wrapper">
-            <div class="viewer-header">
-              <span class="viewer-title">🧊 Cube Lumineux</span>
-            </div>
-            <model-viewer id="cube3D" src="tp/cube.glb" camera-controls autoplay></model-viewer>
-          </div>
-          <div class="btn-group">
-            <a href="tp/cube.blend" download class="btn">📥 Télécharger le Cube</a>
-          </div>
-        </div>
-
-        <!-- Projet 5 -->
-<div class="project-card">
-  <h3>TP – Puzzle 3D Interactif</h3>
-  <p>Ce TP illustre la modélisation d’un puzzle 3D avec des formes imbriquées.</p>
-  
-  <div class="viewer-wrapper">
-    <div class="viewer-header">
-      <span class="viewer-title">🧩 Puzzle 3D</span>
-    </div>
-
-    <model-viewer id="puzzle3D" src="tp/puzzle.glb" camera-controls auto-rotate></model-viewer>
-
-    <div class="viewer-footer">
-      <span>💡 Faites pivoter et explorez les pièces du puzzle 🔍</span>
-    </div>
-  </div>
-
-  <div class="btn-group">
-    <a href="tp/puzzle.blend" download class="btn">📥 Télécharger le Puzzle</a>
-  </div>
-</div>
-
-
-        <!-- Projet 6 -->
-<div class="project-card">
-  <h3>TP – Meuble IKEA Mandal 3D</h3>
-  <p>Ce TP présente la modélisation du meuble IKEA Mandal en 3D, avec un rendu réaliste et interactif.</p>
-
-  <div class="viewer-wrapper">
-    <div class="viewer-header">
-      <span class="viewer-title">🪵 IKEA Mandal</span>
-    </div>
-
-    <model-viewer id="mandal3D" src="tp/Sketchfab_2020_07_27_10_51_17.glb" camera-controls auto-rotate></model-viewer>
-
-    <div class="viewer-footer">
-      <span>💡 Tournez pour explorer le meuble sous tous les angles 🔍</span>
-    </div>
-  </div>
-
-  <div class="btn-group">
-    <a href="tp/Sketchfab_2020_07_27_10_51_17.blend" download class="btn">📥 Télécharger le modèle </a>
-  </div>
-</div>
-
-
-        <!-- Projet 7 -->
-        <div class="project-card">
-          <h3>TP – IKEA EKET Cube</h3>
-          <model-viewer id="eketCube3D" src="tp/IKEA_EKET_Cube.glb" camera-controls auto-rotate></model-viewer>
-          <div class="btn-group">
-            <a href="tp/IKEA_EKET_Cube.blend" download class="btn">📥 Télécharger le Modèle</a>
-          </div>
-        </div>
-
-        <!-- Projet 8 -->
-        <div class="project-card">
-          <h3>TP – IKEA EKET 2 Drawers</h3>
-          <model-viewer id="eketDrawers3D" src="tp/IKEA_EKET_2_drawers.glb" camera-controls auto-rotate></model-viewer>
-          <div class="btn-group">
-            <a href="tp/IKEA_EKET_2_drawers.blend" download class="btn">📥 Télécharger le Modèle</a>
-          </div>
-        </div>
-
-        <!-- Projet 9 -->
-        <div class="project-card">
-          <h3>TP – IKEA Mandal</h3>
-          <model-viewer id="mandal3D" src="tp/IKEA_Mandal.glb" camera-controls auto-rotate></model-viewer>
-          <div class="btn-group">
-            <a href="tp/Mandal.blend" download class="btn">📥 Télécharger le Modèle</a>
-          </div>
-        </div>
-
-      </div> <!-- ✅ fin de .projects-grid -->
+      <img src="photo.jpg" alt="Photo de Meriem" class="hero-photo">
+      <h1>Bienvenue sur mon Portfolio</h1>
+      <p class="subtitle">Étudiante en Master Informatique – Data Engineering & Web Technologies.</p>
+      <a href="#projects" class="btn">Voir mes projets</a>
     </section>
   </main>
-   
 
-  <!-- ====== SECTION RENDERS / ANIMATIONS ====== -->
-<section class="renders-section">
-  <h2 class="renders-title">Renders & Animations</h2>
+  <!-- ====== SECTION PROJETS ====== -->
+  <section class="projects-section" id="projects">
+    <h2 class="blender-title">
+      Projets Blender
+      <img src="images/blender_logo.png" alt="Logo Blender" class="blender-title-logo">
+    </h2>
 
-  <div class="renders-grid">
-    <!-- Vidéo 1 -->
-    <div class="render-card">
-      <video controls autoplay muted loop>
-        <source src="videos/Video_m.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo.
-      </video>
-      <p>Animation 3D : Modèle M</p>
+    <div class="projects-grid">
+
+      <!-- ===== Exemple : Projet 1 ===== -->
+      <div class="project-card">
+        <h3>TP - Création d’un Objet 3D</h3>
+
+        <div class="viewer-wrapper">
+          <div class="viewer-header">
+            <span class="viewer-title">🧱 Aperçu 3D de l’Objet</span>
+          </div>
+
+          <model-viewer id="objet3D" src="tp/5.glb" camera-controls></model-viewer>
+
+          <script type="module">
+            const viewer = document.querySelector('#objet3D');
+            viewer.addEventListener('load', () => {
+              const material = viewer.model.materials[0];
+              material.pbrMetallicRoughness.setBaseColorFactor([0.6, 0.45, 0.85, 1.0]);
+            });
+          </script>
+
+          <div class="viewer-footer">
+            <span>💡 Faites pivoter et zoomez pour examiner l’objet 🔍</span>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <a href="tp/3-2.blend" download class="btn">📥 Télécharger l’objet</a>
+        </div>
+      </div>
+
+      <!-- ====== Projet 2 ====== -->
+      <div class="project-card">
+        <h3>TP - Chaise 3D</h3>
+
+        <div class="viewer-wrapper">
+          <model-viewer id="chaise3D" src="tp/chaise.glb" camera-controls></model-viewer>
+
+          <script type="module">
+            const viewer2 = document.querySelector('#chaise3D');
+            viewer2.addEventListener('load', () => {
+              const material = viewer2.model.materials[0];
+              material.pbrMetallicRoughness.setBaseColorFactor([1.0, 0.45, 0.1]);
+            });
+          </script>
+
+          <div class="viewer-footer">🪑 Faites pivoter la chaise</div>
+        </div>
+
+        <div class="btn-group">
+          <a href="tp/chaise.blend" download class="btn">📥 Télécharger</a>
+        </div>
+      </div>
+
+      <!-- ====== Projet 3 ====== -->
+      <div class="project-card">
+        <h3>TP – Table 3D</h3>
+
+        <div class="viewer-wrapper">
+          <model-viewer id="table3D" src="tp/Table.glb" camera-controls></model-viewer>
+
+          <script type="module">
+            const viewer3 = document.querySelector('#table3D');
+            viewer3.addEventListener('load', () => {
+              const material = viewer3.model.materials[0];
+              material.pbrMetallicRoughness.setBaseColorFactor([1.0, 0.45, 0.1]);
+            });
+          </script>
+
+          <div class="viewer-footer">🪵 Explorez la table 3D</div>
+        </div>
+
+        <div class="btn-group">
+          <a href="tp/Table.blend" download class="btn">📥 Télécharger</a>
+        </div>
+      </div>
+
+      <!-- ====== Projet 4 : Cube animé ====== -->
+      <div class="project-card">
+        <h3>TP – Animation d’un Cube Lumineux</h3>
+
+        <div class="viewer-wrapper">
+          <model-viewer src="tp/cube.glb" camera-controls autoplay></model-viewer>
+        </div>
+
+        <div class="btn-group">
+          <a href="tp/cube.blend" download class="btn">📥 Télécharger</a>
+        </div>
+      </div>
+
+      <!-- ====== Projet 5 : Puzzle ====== -->
+      <div class="project-card">
+        <h3>TP – Puzzle 3D Interactif</h3>
+
+        <div class="viewer-wrapper">
+          <model-viewer src="tp/puzzle.glb" camera-controls auto-rotate></model-viewer>
+        </div>
+
+        <div class="btn-group">
+          <a href="tp/puzzle.blend" download class="btn">📥 Télécharger</a>
+        </div>
+      </div>
+
+      <!-- ====== Projet 6 : IKEA Mandal ====== -->
+      <div class="project-card">
+        <h3>TP – Meuble IKEA Mandal</h3>
+
+        <div class="viewer-wrapper">
+          <model-viewer src="tp/Sketchfab_2020_07_27_10_51_17.glb" camera-controls auto-rotate></model-viewer>
+        </div>
+
+        <div class="btn-group">
+          <a href="tp/Sketchfab_2020_07_27_10_51_17.blend" download class="btn">📥 Télécharger</a>
+        </div>
+      </div>
+
+      <!-- ====== Projet 7 & 8 ====== -->
+      <div class="project-card">
+        <h3>TP – IKEA EKET Cube</h3>
+        <model-viewer src="tp/IKEA_EKET_Cube.glb" camera-controls auto-rotate></model-viewer>
+      </div>
+
+      <div class="project-card">
+        <h3>TP – IKEA EKET Drawers</h3>
+        <model-viewer src="tp/IKEA_EKET_2_drawers.glb" camera-controls auto-rotate></model-viewer>
+      </div>
+
+    </div> <!-- end grid -->
+  </section>
+
+  <!-- ====== SECTION VIDEOS ====== -->
+  <section class="renders-section" id="renders">
+    <h2 class="renders-title">🎬 Renders & Animations</h2>
+
+    <div class="renders-grid">
+      <div class="render-card">
+        <video controls autoplay muted loop>
+          <source src="videos/Video_m.mp4" type="video/mp4">
+        </video>
+        <p>Animation 3D : Modèle M</p>
+      </div>
+
+      <div class="render-card">
+        <video controls autoplay muted loop>
+          <source src="videos/Video_puzzle.mp4" type="video/mp4">
+        </video>
+        <p>Animation 3D : Puzzle</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SECTION RAPPORT ====== -->
+  <section class="report-section" id="report">
+    <h2 class="report-title">📄 Rapport de Projet</h2>
+
+    <div class="report-card">
+      <p><strong>rapport.pdf</strong></p>
+      <p>Ce rapport présente les étapes des projets Blender, les techniques utilisées et les rendus.</p>
+
+      <div class="btn-group">
+        <a href="tp/rapport.pdf" target="_blank" class="btn">🔎 Voir le rapport</a>
+        <a href="tp/rapport.pdf" download class="btn">📥 Télécharger</a>
+      </div>
     </div>
 
-    <!-- Vidéo 2 -->
-    <div class="render-card">
-      <video controls autoplay muted loop>
-        <source src="videos/Video_puzzle.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo.
-      </video>
-      <p>Animation 3D : Puzzle</p>
+    <div class="report-iframe">
+      <iframe src="tp/rapport.pdf" width="100%" height="1200px"></iframe>
     </div>
-  </div>
-</section>
-
-<!-- ====== SECTION RAPPORT DE PROJET ====== -->
-<section class="report-section" id="report">
-  <h2 class="report-title">📄 Rapport de Projet</h2>
-  <p class="report-subtitle">
-    Vous pouvez consulter le rapport complet de mes travaux, détaillant chaque étape du projet et les rendus 3D réalisés.
-  </p>
-
-  <!-- Carte avec résumé et boutons -->
-  <div class="report-card">
-    <p>Nom du rapport : <strong>rapport.pdf</strong></p>
-    <p>Résumé : Ce rapport présente les différentes étapes de mes projets Blender, les techniques utilisées, ainsi que des captures des rendus 3D et animations réalisées.</p>
-    
-    <div class="btn-group">
-      <a href="tp/rapport.pdf" target="_blank" class="btn">🔎 Voir le rapport</a>
-      <a href="tp/rapport.pdf" download class="btn">📥 Télécharger le rapport</a>
-    </div>
-  </div>
-
-  <!-- Intégration PDF directement dans la page -->
-  <div class="report-iframe">
-    <iframe src="tp/rapport.pdf" width="100%" height="1200px"></iframe>
-  </div>
-</section>
-
+  </section>
 
   <footer>
     <p>© 2025 Kaouane Meriem — Tous droits réservés.</p>
