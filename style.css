@@ -357,3 +357,92 @@ model-viewer:active {
 iframe {
   border: none;
 }
+
+
+.renders-section {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.renders-title {
+  font-size: 2em;
+  color: #ffcc70;
+  margin-bottom: 40px;
+}
+
+.renders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.render-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.render-card:hover {
+  transform: scale(1.03);
+}
+
+.render-card video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.render-card p {
+  color: #fff;
+  font-size: 0.95em;
+}
+
+/* ====== SECTION RAPPORT DE PROJET ====== */
+.report-section {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.report-title {
+  font-size: 2em;
+  color: #ffcc70;
+  margin-bottom: 20px;
+}
+
+.report-subtitle {
+  font-size: 1.1em;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+}
+
+.report-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.report-card p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.report-iframe {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
